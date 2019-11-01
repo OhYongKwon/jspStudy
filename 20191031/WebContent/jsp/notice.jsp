@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,8 +49,9 @@
 		</table>
 	</div>
 		<br />
-		<button type="button" onclick="location.href='n_write.jsp'">글쓰기</button>
-		
+		<c:if test ="${grant == 'S'}">
+			<button type="button" onclick="location.href='n_write.jsp'">글쓰기</button>
+		</c:if>
 	<div id="footer"><%@ include file="footer.jsp" %></div>
 </div>
 </body>
