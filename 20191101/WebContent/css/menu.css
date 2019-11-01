@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.menubar {
+	text-align:center;
+}
+ul {
+	display:inline-block; 
+	*display:inline; 
+	zoom:1;
+	
+	list-style: none;
+	height: 20px; 
+	background-color: rgba(00, 250, 154, 0.5);
+	padding: 10px;
+}
+
+ul li {
+	float: left;
+	margin-left:-1px;
+	z-index:1;
+	
+	margin-right: 10px;
+}
+
+ul li a {
+	font-size: 15px;
+	color: white;
+	text-decoration: none;
+}
+
+.white a {
+	color: #fff;
+}
