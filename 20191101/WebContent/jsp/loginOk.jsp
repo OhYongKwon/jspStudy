@@ -14,14 +14,21 @@
 	MemberDao dao = new MemberDao();
 	
 	String grant = dao.isLoginCheck(id,pw);
-	if(grant.equals(null)){
-		//자바스크립틀르 이용하여 메세지를 전달할 수 있도록한다.
-	}else{
+	if(grant==null){
+	%>
+		 <script>
+		 	alert("로그인 실패. 다시입력하세요")
+		 	document.location="login.jsp";
+		 </script>
+	<%
+	
+	
+		 }else{
 		session.setAttribute("id", id);
 		session.setAttribute("pw", pw);
 		session.setAttribute("grant", grant);
 		response.sendRedirect("main.jsp");
 	}
-%>
+	%>
 </body>
 </html>

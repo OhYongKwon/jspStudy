@@ -10,6 +10,14 @@ public class MemberDto {
 	private Date enterDate;
 	private String addr;
 	
+	public MemberDto(String id, String name, String password, String addr) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.password = password;
+		this.addr = addr;
+	}
+
 	public MemberDto() {
 
 	}

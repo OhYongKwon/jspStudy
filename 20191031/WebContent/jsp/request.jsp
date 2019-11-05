@@ -32,7 +32,7 @@
 						</td>
 					</tr>
 					<tr>
-						<th align="center" wodtj="100">지역</th>
+						<th align="center" width="100">지역</th>
 						<td width="150">
 							<select id="city" name="city">
 								<option value="대구" selected="selected">대구</option>
