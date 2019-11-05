@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>환영합니다.</h1>
-<a href ="boardList.do">전체보기</a>
+<h1>게시글작성실패</h1>
+<a href ="boardList.do">목록돌아가기</a>
 </body>
 </html>

@@ -32,11 +32,13 @@
 			
 		</table>
 	</div>
+	<div>
+	<button type="button" onclick="location.href='boardWrite.do'">글쓰기</button>&nbsp;&nbsp;
+	<button type="button" onclick="location.href='index.do'">홈으로</button>
 	
+	</div>
 </div>
-<div>
-	<button type="button" onclick="location.href='borderWrite.do'">글쓰기</button>
-</div>
+
 
 </body>
 </html>

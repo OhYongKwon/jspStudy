@@ -1,6 +1,7 @@
 package co.micol.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -64,6 +65,20 @@ public class BoardDao {
 	
 	public int insert(BoardDto dto) { //글추가
 		int n =0;
+		String sql = "insert into mvc_board(bid,bname,btitle,bcontent,bdate,bgroup,bstep,bindent)"
+				+ " values(b_num.nextval,?,?,?,?,b_num.currval,0,0)";
+		
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, dto.getName());
+			psmt.setString(2, dto.getTitle());
+			psmt.setString(3, dto.getContents());
+			psmt.setDate(4, (Date) dto.getwDate());
+			n= psmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 		close();
 		return n;
 	}
